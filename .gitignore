@@ -11,7 +11,7 @@ Icon
 
 # Thumbnails
 ._*
-
+out
 # Files that might appear in the root of a volume
 .DocumentRevisions-V100
 .fseventsd
@@ -28,3 +28,5 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+/*/java/leetcode/editor/cn/all.json
+/*/java/leetcode/editor/cn/translation.json
