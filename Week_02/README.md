@@ -42,6 +42,27 @@
 	1. 前序遍历（pre-order）:根-左-右
 	2. 中序遍历（in-order):左-根-右
 	3. 后序遍历（post-order）：左-右-根
+* 代码模板
+```
+// 前序遍历
+def preorder(self,root):
+    if root:
+        self.traverse_path.append(root,val)
+        self.preorder(root.left)
+        self.preorder(root.right)
+// 中序遍历
+def inorder(self,root):
+    if root:
+        self.inorder(root.left)
+        self.traverse_path.append(root,val)
+        self.inorder(root.right)
+// 后序遍历
+def postorder(self,root):
+    if root:
+        self.postorder(root.left)
+        self.postorder(root.right)
+        self.traverse_path.append(root,val)
+```
 * ![alt 复杂度分析](常见数据结构操作.png)
 # 二叉搜索树Binary Search Tree
 * 概念：也称二叉排序树、有序二叉树、排序二叉树，是指一颗空树或者具有以下性质的二叉树：
