@@ -38,8 +38,44 @@ public class Leetcode236 {
         int p = 5, q = 1;
         // 构建完全二叉树 （测试用例）
         TreeNode root = createBinaryTree(nums, 0);
+        // 前序遍历
+        preorder(root);
+        System.out.println();
+        // 中序遍历
+        inorder(root);
+        System.out.println();
+        // 后续遍历
+        postorder(root);
+        System.out.println();
         TreeNode res = leetcode236.lowestCommonAncestor2(root, new TreeNode(5), new TreeNode(1));
         System.out.println("7,4 LCA=" + res.val);
+    }
+
+    // 左右根
+    private static void postorder(TreeNode root) {
+        if (root != null) {
+            postorder(root.left);
+            postorder(root.right);
+            System.out.print(root.val + " > ");
+        }
+    }
+
+    // 左根右
+    private static void inorder(TreeNode root) {
+        if (root != null) {
+            inorder(root.left);
+            System.out.print(root.val + " > ");
+            inorder(root.right);
+        }
+    }
+
+    // 根左右
+    private static void preorder(TreeNode root) {
+        if (root != null) {
+            System.out.print(root.val + " > ");
+            preorder(root.left);
+            preorder(root.right);
+        }
     }
 
     // 数组转完全二叉树 数组下标为index 的左节点 2*index+1 右节点 2*index+2
