@@ -51,6 +51,7 @@ class Leetcode70 {
 * 本质上就是一种特殊的递归，本质上就是找重复性
 * 学习目标：碰到一个问题就是找到它的重复性，最近重复性或者最优重复性
 * 分治代码模板
+* 分治相对于递归，将大问题切分成小问题，合并小问题的解，关键是在于如何切分子问题
 ```java
 private static int divide_conquer(Problem problem){
     // recursion terminator
@@ -94,8 +95,10 @@ def recursion(level,param1,param2,...):
   2. 在尝试了所有可能的分步方法后宣告该问题没有答案。
 * 在最坏的情况下，回溯法会导致一次复杂度为指数时间的计算。
 
-# 练习题
+# 分治 & 递归
 > 分治: terminator -> process(split problem)  -> drill down(subproblemes) && merge(result) -> reverse states
-* [Leetcode[50]](https://leetcode-cn.com/problems/powx-n/) ***高频***
-
+> 递归: terminator -> process(current level logical) -> drill down -> reverse states
 # 晕菜，回头复习下递归的执行流程
+
+## 实战
+* [Leetcode[50]](https://leetcode-cn.com/problems/powx-n/)
